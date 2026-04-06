@@ -823,9 +823,9 @@ na verdade.)"<<endl;
         lutar:
         cout<<endl<<R"(Bom, acho que não temos escolha.” Blanc disse sem qualquer emoção em sua voz. “Hora
 de caçar vampiros.” Ela desembainha sua lâmina.)"<<endl;
-num = continuamento(continuar, num, 3);
+num = continuamento(continuar, num, 5);
 
-    if (num > 3){//p
+    if (num > 5){//p
         cout<<endl<<R"(O primeiro a se mover foi Gris, avançando impavidamente em direção, ele empunhou sua
 katana e fez um corte vertical no vampiro.
 “Vocês não perdem tempo, que gracinha.” Disse o vilão, segurando a lâmina com dois
@@ -850,7 +850,7 @@ Blanc.
 Naquele momento, o perigoso vampiro virou cinzas, completamente humilhado.
 Parabéns, você concluiu o final “Vampiro bom é vampiro morto”.)";
     }//p
-    else if (num <= 3){//c
+    else if (num <= 5){//c
         cout<<endl<<R"(Mas que azar, hein?
         
 Por um momento, parecia que nada podia dar certo.
