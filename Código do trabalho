@@ -1,0 +1,939 @@
+#include <iostream>
+#include <time.h>
+#include <thread>
+#include <chrono>
+#include <limits> 
+using namespace std;
+int validaropção(int opção, int min, int max, string mensagemErro);
+void processamento();
+int continuamento(int continuar, int num, int comp);
+int rolagem(int comp);
+int main()
+{
+    srand(time(NULL));
+    cout<<" == ESTÁ PRONTO PARA IMERGIR E PARTICIPAR NA AVENTURA DE BLANC E SEU GRUPO? =="<<flush<<endl;
+    this_thread::sleep_for(chrono::seconds(2));
+    cout<<endl<<"Vamos lá "<<flush<<endl<<endl;
+    this_thread::sleep_for(chrono::seconds(1));
+    
+    int continuar;
+    int num;
+    int opção;
+    cout<<R"(A taverna estava movimentada, e isso era uma raridade, considerando o pequeno vilarejo
+em que ela se localizava.
+O principal e único motivo para tal movimento era uma masmorra nas proximidades da vila,
+e a taverna era o melhor lugar para aventureiros se reunirem e trocarem informações.
+“Bolei um plano para nos tirar da falência, vamos criar um dojô para treinar novos
+aventureiros, daí cobramos uma taxa de matrícula e uma para cada sucesso que um aluno
+tiver!” Um rapaz chamado Vert falava e gesticulava animadamente para os membros do seu
+grupo.
+“É uma ideia estúpida, você é um cara estúpido.” Sua irmã, Jaune, disse num tom cansado,
+como se tivesse que lidar com ele todo dia, o dia todo.
+“É uma ideia brilhante! O Gris concorda comigo, certo?”
+Os dois olham para o outro lado da mesa, um homem com uma máscara oni permanecia
+sentado em seu lugar, de braços cruzados.
+Ele boceja. “Desculpe, eu não estava ouvindo.”
+O garoto loiro olha para ele com olhos arregalados, a garota ao seu lado sorri. “Que inveja,
+queria ser ignorante como você.”
+“Pera aí, como assim não ouviu? Você estava aqui o tempo todo!” Vert protestou.
+“Comecei a pensar em outra coisa depois que você disse que bolou um plano.” O samurai
+responde com a maior sinceridade, arrancando uma risada da garota.
+O rapaz se senta, com o rosto da derrota, mas isso não quer dizer que ele não podia
+continuar falando.
+Em um lugar um mais isolado na taverna, duas pessoas observavam o trio.
+“Grupinho peculiar o seu, e um pouco escandaloso também.”
+“Pensar antes de falar não é muito bem o que eles fazem.”
+Um morador do vilarejo conversava com o quarto membro daquela equipe, uma mulher de
+cabelos pretos e olhos brancos.
+Eles trocavam informações sobre a masmorra próxima ao vilareja, a essa altura, já estava
+claro o objetivo do grupo.
+“Aquele lugar é perigoso, já conheci muitos aventureiros que foram explorá-la e nunca mais
+voltaram.” O morador a avisava, genuinamente preocupado.
+“É que eu sou apaixonada por não morrer de fome, entende?”
+Ele ri. “É claro, é claro, aventureiros tem uma vida difícil.”
+“A gente faz o que pode.” Ela sorri e se levanta da cadeira, o homem faz o mesmo.
+“Obrigada pelos seus serviços, Sr. Henri.”
+“Eu não fiz nada demais, Srta. Blanc. Sou apenas um carpinteiro que ajuda quem precisa,
+tenho certeza de que você faz o mesmo.”
+“A diferença é que eu sou paga por isso.”
+“Para garantir o pão de cada dia, certo?”
+Ela bufa, de certa forma, o homem estava certo.
+“E mais uma coisa, ouvi boatos de um vampiro vagando pela masmorra, então tome
+cuidado.”
+“E você só deixou para me contar isso agora?” Seu tom era zombeteiro, Henri apenas ri de
+constrangimento.
+“É um boato antigo, achei que seria melhor avisá-la, só por garantia.”
+Blanc dá um sorriso tranquilizador ao homem. “Vou manter isso em mente.”
+Ela se despede e se aproxima do grupo.
+“Pessoal, voltei, e com um plano.” Ela diz ao seu grupo.
+“Então, o que vamos fazer, chefia?” Vert pergunta, curioso.
+Blanc apenas sorri e declara. “Vamos para a masmorra.
+Sem mais enrolação, os quatro chegam ao lugar das escolhas definitivas, em busca do
+tesouros e das riquezas para garantir o jantar.
+“Mas... essas ruínas já não foram exploradas antes? Talvez nem tenha mais tesouros para a
+gente aqui.” Vert admitia seus pensamentos não muito agradáveis para a situação dele.
+“Sua lógica pessimista me comove, não sabia que você conseguia pensar assim.” Jaune
+zombava do irmão, como sempre.
+“Para sua informação, eu sou capaz de pensar em muita coisa, quer ver? Olha —!”
+“Já chega, cale a boca.” Ela o interrompe tampando sua boca, ao soltar, era possível ouvir
+resmungos silenciosos vindos do garoto.
+Blanc guiava o grupo pelos caminhos labirínticos da masmorra enquanto ouvia a interação
+de seus colegas. “Vert tem razão, a maioria das relíquias deste lugar já foram saqueadas,
+mas essa masmorra nunca foi concluída.”
+“E o que isso quer dizer?” O samurai perguntou.
+“Quer dizer que ninguém passou pelo último obstáculo, o que significa que os tesouros mais
+valiosos ainda não foram encontrados.” Os irmãos pareciam entender a explicação da líder,
+ao contrário de um espadachim com máscara de oni.
+“Por favor, explique em uma língua que eu entenda.”
+Blanc suspira, mas já esperava por isso. “Vamos descer o cacete no chefão.”
+Uma lâmpada metafórica apareceu sobre a cabeça do samurai. “Aí sim! Nossa batalha será
+gloriosa, e nossa vitória será absoluta!”
+Eles riem do jeito dramático do samurai, já estavam acostumados.
+Quando o silêncio finalmente reinou naquele grupo, Blanc parou, e os outros três pararam
+junto.
+“Dois caminhos...” Blanc ponderava.
+Não parecia haver muita diferença entre eles, mas o caminho à esquerda tinha um leve
+cheiro de sangue, o que poderia ser normal para um lugar perigoso como esse.
+O caminho à direita não tinha nada de especial, apenas —!
+RAAAAAAAAAAHHHHHHHHH!!!!!!
+Um rugido monstruoso vinha dele, assustando um ou dois membros do grupo.
+“É o que eu tô pensando que é?” Jaune perguntava, querendo confirmação.
+“O destino nos preparou uma presa digna de ser caçada.” Gris afirmava com sua confiança
+habitual.
+“Não, não, o destino não nos preparou nada! E eu não vou arriscar minha vida para matar um
+lagarto gigante quase indestrutível!” Reclamou a arqueira loira como se tivessem roubado
+seu pão.
+“Está com medo de um dragão, mana? Não sabia desse lado seu.” Provocou Vert,
+aproveitando a oportunidade.
+“Vocês podem ficar quietos? Estou tentando pensar!” Blanc gritou, pondo ordem na casa.
+Todos ficaram em silêncio, dando espaço para a líder tomar a decisão.)"<<endl;
+        cout<<endl<<"Para que lado você vai:"<<endl<<"1 – Ir para a direita"<<endl<<"2 – Ir para a esquerda"<<endl;
+        
+cin >> opção;
+
+opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 - Para ir pra direita, 2 -  Para ir pra esquerda");
+       
+        if (opção == 1){//d
+        cout<<endl<<R"(“Vamos para a direita, é só um dragão mesmo.” Blanc decidiu, inexpressiva.
+“Tomaremos este caminho, e todos que entrarem na nossa frente serão mortos!” Gris
+decretou como a verdade inevitável.
+“Ah, droga.” Jaune simplesmente desistiu.
+Poucos passos foram dados na direção escolhida, quando outro rugido pôde ser ouvido.
+Dessa vez, o rugido foi tão alto que os ossos de todos estremeceram.
+“Agora não tem mais volta.” Blanc disse, como se a possibilidade de darem meia volta não
+existisse.
+“O que? Se eu morrer, eu mato vocês!” Disse a arqueira com um ar de irritação.
+O grupo continuou andando pelas ruínas a procura de... bom, qualquer coisa, mas era
+esperado que estaria quase tudo vazio, então os quatro praticamente rusharam a
+masmorra, até finalmente rolar alguma coisa.
+“Fiquem preparados, algo está vindo.” Alertou Blanc.
+“Finalmente, algo interessante.” Gris falou, pronto para desembainhar suas katanas.
+Eles aguardaram até o barulho de passos ficar mais alto, eram tantos passos que Blanc
+estranhou.
+No final do corredor, uma horda de monstros surgiu, correndo desesperadamente em
+direção a eles.
+“Pessoal, isso aí é normal?” Vert perguntou, genuinamente preocupado.
+“Não, não é.” A líder respondeu. “Eles estão fugindo.”)"<<endl;
+        cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Eliminar todos"<<endl<<"2 – Se esconder e esperar a horda passar"<<endl;
+        
+cin >> opção;
+
+opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para eliminar todos 2 – Para se esconder e esperar a horda passar");
+
+                if (opção == 1){ //a1
+                    cout<<endl<<R"(“Bom, não importa, vamos acabar com eles.”
+“Não precisa dizer duas vezes.” O samurai não perdeu tempo e avançou com suas katanas
+em mãos.
+Em poucos instantes, goblins e ogros já estavam sendo fatiados.
+“Esse cara não perde tempo.” Vert comentou, equipando seu bastão bo. “Eu também vou lá
+me divertir um pouco.”
+Jaune foi a única que não pegou seu arco, Blanc a notou. “Está economizando?”
+Ela respondeu. “Se formos lutar contra um dragão, tenho que dar o meu máximo com o
+máximo que tenho.”
+A líder assentiu e foi para a batalha, eliminando monstros rapidamente com sua adaga, ao
+seu redor, via Gris massacrando vários ogros e Vert manipulando a terra ao seu favor,
+goblins eram esmagados e soterrados por suas habilidades.
+Resumindo, a luta continuou até restar apenas poeira e cinzas.
+“Bom trabalho, time, vamos continuar.”
+“Espera, você não acha que o que aconteceu aqui foi estranho, ver todos esses monstros correndo?” Jaune opinou
+“Tem razão, isso quer dizer que, o que está a nossa frente, provavelmente é aquele dragão
+que ouvimos antes.” Blanc explicou.
+“Ótimo, nossa presa está bem ao nosso alcance, o que estamos esperando?” Gris falou na
+lata, como sempre.
+Sem perder mais tempo, eles andaram pelos corredores, com o tempo, o labirinto virou
+uma caverna, e a sensação era de que o perigo estava cada vez mais próximo.
+“Quando é que o dragão vai aparecer, hein?” O garoto dobrador de terra falou só por falar
+mesmo.
+Segundos depois, a parede ao lado deles foi demolida, causando um som alto e uma cortina
+de fumaça.
+Quando a fumaça se dissipou, adivinha quem era? Pois é.
+“Você tinha que abrir essa sua boca, não é, Vert?” Jaune culpou o irmão.
+“Agora a culpa é minha?” Ele parecia chateado.
+“Preparem-se! Ele vai soprar!” Blanc gritou para o grupo, era hora da ação.)";
+cout<<endl<<endl<<"O que você vai fazer: (rolagem de dados)"<<endl<<"1 – Desviar "<<endl<<"2 – Contra-atacar "<<endl;
+                cin >> opção;
+
+opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para desviar 2 – Para contra-atacar (rolagem de dados)");    
+                if (opção == 1) {//gh
+                    cout<<endl<<R"(O dragão sopra e todos se espalham, Blanc não perde tempo e dá a ordem para todo
+mundo. “Vert, distraia o dragão, eu e Jaune vamos atingir seus pontos cegos, e Gris...!”
+Ao olhar para o samurai, ela simplesmente desistiu de dar a ordem a ele.
+“Enfrente-me, monstruosidade escamosa! Eu lhe mostrarei o que é dor!” Gris grita, eufórico
+e pula em direção ao inimigo como se não tivesse apreço pela vida, rindo como um idiota.
+“Acho que isso dá pro gasto.” Concluiu Blanc e começou a se mover. “Bora.”)"<<endl<<endl;
+
+num = continuamento(continuar, num, 10);
+                if (num > 10){//zx
+                    cout<<endl<<R"(Por algum motivo, Blanc estava bem confiante naquele momento.
+Vert jogava pedras e criava pilares para atordoar e desestabilizar o dragão, Jaune atirava em
+seus olhos e Blanc causava explosões em seus braços e pernas, tudo que restava era Gris
+arrancar a cabeça do bichão.
+“Ei, Gris, por que está demorando tanto!” Jaune gritou, esperando que a luta acabasse logo.
+“Estou aproveitando o momento, o momento em que decapitarei um dragão com minhas
+próprias lâminas!” Gris falava com orgulho, apontando um das katanas para o dragão.
+“Tudo terminará no meu próximo golpe.”
+Ele fez uma arrancada em uma velocidade incrível, indo diretamente no pescoço do
+monstro, que já estava ferido e cansado.
+SLAAAAAAAAASSSSSHHHHHH!!!!!!
+Com um corte duplo, Gris o atravessou, e a cabeça do lagarto gigante voou junto.
+Parabéns, você concluiu o final “Lagarto gigante arregaçado com sucesso”.)";}//zx
+                else if (num <= 10) {//fr
+                    cout<<endl<<R"(Blanc teve um mal pressentimento para essa luta.
+Vert jogava pedras e criava pilares para atordoar e desestabilizar o dragão, Jaune atirava em
+seus olhos e Blanc causava explosões em seus braços e pernas, tudo que restava era Gris
+arrancar a cabeça do bichão.
+Só que antes de ter a chance, o samurai foi atingido e empurrado para longe, e antes de
+Blanc substitui-lo, o dragão conseguiu alcançar Vert.
+“Irmão!” Jaune gritava, preocupada com ele.
+Ele estava preso entre as garras do monstrengo, que estava prestes a dar mais uma
+baforada, ele deu um sorriso de nervoso, mas falou com confiança. “Tem certeza que sua
+atenção deveria estar em mim?”
+O dragão não entendeu, e iria soprar mesmo assim, então uma flecha atingiu seu pescoço.
+Isso mesmo, a flecha foi poderosa o suficiente para penetrar as escamas do dragão.
+“Não gostou? Que tal mais uma?” Jaune o provocou, desta vez atirando uma flecha ainda
+mais forte.
+O lagarto soltou Vert, que foi resgatado por Blanc, mas a atenção da besta foi para a
+arqueira.
+“Isso vai doer.” Jaune amaldiçoou a si mesma quando viu uma cauda enorme vindo até ela.
+Do outro lado da caverna, Gris recobrou a consciência e voltou rapidamente.
+“Eu não cairei tão facilmente, monstro, estou pronto para a revanche!” Ele correu em
+disparada, virando seus golpes do pescoço do dragão até decapitá-lo.
+Ali perto, Vert pegava Jaune e a colocava nas costas.
+“Ela só está desmaiada, vai ficar tudo bem.” Vert tranquilizava Blanc, que o acompanhava.
+“Que bom, Gris vai matar o dragão daqui a pouco, então já podemos descansar.”
+“É sério?” Ele olhou para a batalho e viu um cadáver de dragão sem cabeça, e um samurai
+caminhando até eles. “Tem razão, vamos descansar.”
+Parabéns, você concluiu o final “Descansar, né? Pois não somos feitos de ferro”.)";}//fr
+}//gh
+
+            else if (opção == 2) { //a
+                
+                num = rolagem(10);
+                
+                if (num > 10){
+                    cout<<endl<<R"(Ao abrir a boca antes de soprar, o dragão deixou a abertura perfeita para Blanc agir, ela
+preparou rapidamente uma de suas magias favoritas, e a lançou na boca do lagarto gigante.
+BOOOOOOOOOOOMMMMMMM!!!!!!
+Uma bomba de fogo explodiu dentro da garganta do monstrengo, desestabilizando-o.
+“Blanc, isso foi incrível!” Jaune a elogiou.
+“Eu sei, eu sei, sinta-se à vontade para alimentar meu mais o meu ego.” Blanc se permitiu
+uma piada antes da ação. “Agora vamos para cima dele!”
+Ela mal terminou a frase quanto um Gris eufórico pulou em cima do dragão como se não
+tivesse medo de ser obliterado, e ainda por cima, estava rindo como um idiota.
+Mas algo aconteceu, algo que ninguém esperava.
+Naquela circunstância, o dragão não tinha mais nada a perder, então ele simplesmente
+devorou o samurai vivo.
+“O que?” Blanc falou.
+“O que?” Jaune disse.
+“O QUEEEEEEEE!!!” Vert gritou.
+“Vamos tirar ele de lá!” A líder voltou a si e mandou os irmãos agirem.
+“Certo!” Eles responderam.
+A quantidade de ataques lançados naquele dragão não foi brincadeira, mas nada além disso
+foi necessário.
+Por quê? Bom...
+“Tem algo acontecendo.” Jaune notou o lagarto se movendo de maneira estranha.
+Então ele caiu, e um buraco apareceu na barriga do monstro, não só sangue e vísceras
+saltaram para fora, mas também um homem vestido armadura japonesa, com suas duas
+espadas e uma pose triunfante.
+“Eu, sozinho, derrotei esta fera monstruosa!” Gris gritou com orgulho, rindo, até ser
+atingido por uma flecha.
+Jaune o encarava. “O que foi?” Ele perguntou, genuinamente confuso.
+Parabéns, você concluiu o final “De dentro para fora, versão Gris o fod*o”.)";}
+                else if (num <= 10){ //b
+                cout<<endl<<R"(Blanc preparou uma magia de fogo imediatamente e a lançou em direção ao dragão,
+atingindo-o no peito.
+Ele rosnou e fez cara feia.
+“Acho que ele ficou irritado.” Vert comentou.
+“Não me diga.” Blanc respondeu, e logo em seguida arregalou os olhos. “O que ele está
+fazendo?”
+Todos olham para o samurai correndo em direção ao perigo, vulgo dragão descontrolado.
+“Gris, seu idiota! Sai de perto dele!” Ela gritou, mas ele não ouviu, estava ocupado demais
+correndo para a morte, e mesmo assim, estava rindo.
+No momento em que deu o salto, o dragão já tinha o sopro pronto, e descarregou tudo na
+cara do samurai, enviando-o para o outro lado da caverna.
+“Será que ele tá bem?” Vert perguntou, não parecia estar preocupado se seu amigo estava
+morto.
+“Eu estaria mais preocupada com a gente.” Jaune apontou para o enorme e imponente
+lagarto, sim, lagarto cuspidor de fogo.
+“Vert, distraia-o, Jaune, mire nos pontos cegos.” A líder ordenou rapidamente.
+“E você, chefe?” O garoto fez mais uma pergunta.
+“Bom, alguém tem que pôr um fim nele, não é?”
+Todos assentiram e começaram a se mover.)"<<endl;
+
+num = continuamento(continuar, num, 10);
+                    
+                if  (num > 10){
+                    cout<<endl<<R"(Por algum motivo, Blanc estava bem confiante naquele momento.
+Gris estava incapacitado? Sim, mas ainda existia esperança, era só... explodir tudo.
+“Jaune, vá atrás do Gris, Vert, imobilize o dragão!” Ela ordenou, Jaune cumpriu
+imediatamente.
+“E como você acha que eu vou fazer isso?” O rapaz protestou.
+“Dá seu jeito, eu acredito em você.” Frase básica do encorajamento, parece que funcionou.
+Blanc corre, esquivando-se de todo e qualquer ataque que o dragão faça, até passar por
+baixo dele.
+“Agora!” Ela gritou.
+Pilares de pedra surgiram por todos os cantos da caverna, atingindo o monstro por todos os
+lados.
+“Eu sou o cara, não sou?” Vert se vangloriava.
+Enquanto isso, Blanc subia pelas costas do dragão até chegar na cabeça. “Ainda não acabou,
+abra a boca dele!”
+“É pra já, chefia.” Ele mandou uma pedra gigante direto na mandíbula do lagarto. “Olha a
+pedra!”
+Blanc aproveitou a oportunidade e saltou na frente do dragão e jogou uma esfera branca na
+boca dele.
+Ao cair, foi recebida pelo grupo inteiro, Gris estava queimado, mas parecia bem.
+“O que você deu pra ele?” Vert perguntou.
+“Um presente especial.” Ela olha para a enorme criatura, ainda presa aos pilares de pedra, e
+estalou os dedos.
+BOOOOOOOOOOOOMMMMMM!!!!!!!
+Uma explosão rolou dentro do dragão, todos os seus órgãos foram destroçados e fumaça
+branca saia da sua boca.
+“Está feito.” O dragão estava morto.
+Parabéns, você concluiu o final “De dentro pra fora, versão Blanc a fod*na”.)";}
+                else if ( num <= 10){
+                    cout<<endl<<R"(Blanc teve um pressentimento ruim para essa luta.
+Já não bastava ter perdido sua linha de frente, ela ainda tinha a sensação de algo iria dar
+errado.
+“Jaune, vá atrás do —!” Blanc estava prestes a dar as ordens quando o dragão deu um grito
+ensurdecedor. “O que essa lagartixa tá fazendo?”
+Aquele lagarto maldito não terminou por aí, ele avançou contra o grupo com ódio no
+coração.
+Todos se espalharam para confundi-lo, mas o monstro já tinha um alvo em mente.
+“Jaune, cuidado!” Vert a avisou, mas não deu tempo, Jaune foi atingida e colidida com uma
+parede.
+“Vert, vá resgatar sua irmã, eu cuido do dragão.” Essas foram as palavras de Blanc.
+“Sozinha? Tem certeza?” Vert estava indeciso.
+“Confie em mim.” Blanc o tranquilizou. “Vai dar tudo certo.”
+O garoto obedeceu, hesitante, mas obedeceu.
+“Agora é só eu e você.” Os dois adversários se encararam por alguns instantes, mas quando
+o dragão se deu conta, Blanc tinha desaparecido do seu campo de visão.
+“Eu tô aqui!” Ela surgiu ao seu lado, mandando explosões brancas direto na cara.
+O dragão rugiu, furioso, mas não conseguia reagir.
+Quando finalmente reuniu gás para o sopro, foi recebido com ainda mais explosões.
+“Vou continuar atacando até sua cabeça virar pó!” Ela criava chamas tão rápido quanto atirava, a cachola do dragão já não estava mais funcionando direito, 
+de tantos impactos que estava recebendo.
+Para o golpe final, Blanc lançou uma rajada de chamas na cabeça do dragão, destruindo o seu crânio e derretendo o seu cérebro.
+Assim que o cadáver caiu no chão, a líder daquele grupo de desajustados, tomada pela exaustão, desmaiou ali mesmo.
+Parabéns, você concluiu o final “É só um dragão, né?”.)";}    
+            }//b1
+        } //c1
+}//a1
+
+                else if (opção == 2){ //c
+                    cout<<endl<<R"(“Lutar contra eles é desnecessário. Vamos arranjar um canto e esperar eles passarem.”
+“Eu estou totalmente de acordo.” Jaune concordou, sem qualquer vergonha da sua
+covardia.
+“Entendo, quer que guardemos nossas forças para enfrentar o dragão com força total!” Gris
+tirou sua conclusão.
+“Exatamente, você entende rápido, Gris.” Disse Blanc, e logo após olha para Vert.
+Ele pisca. “Que foi? Eu já tinha entendido desde o começo.” Vert não parecia muito certo da
+sua afirmação.
+Eles se escondem atrás de uma pedra e aguardam os monstros sumiram, e só então seguem
+viagem.
+“Ver todos esses monstros correndo foi meio estranho.” Jaune opinou.
+“Tem razão, isso quer dizer que, o que está a nossa frente, provavelmente é aquele dragão
+que ouvimos antes.” Blanc explicou.
+“Ótimo, nossa presa está bem ao nosso alcance, o que estamos esperando?” Gris falou na
+lata, como sempre.
+Sem perder mais tempo, eles andaram pelos corredores, com o tempo, o labirinto virou
+uma caverna, e a sensação era de que o perigo estava cada vez mais próximo.
+“Quando é que o dragão vai aparecer, hein?” O garoto dobrador de terra falou só por falar
+mesmo.
+Segundos depois, a parede ao lado deles foi demolida, causando um som alto e uma cortina
+de fumaça.
+Quando a fumaça se dissipou, adivinha quem era? Pois é.
+“Você tinha que abrir essa sua boca, não é, Vert?” Jaune culpou o irmão.
+“Agora a culpa é minha?” Ele parecia chateado.
+“Preparem-se! Ele vai soprar!” Blanc gritou para o grupo, era hora da ação.)";
+            cout<<endl<<endl<<"O que você vai fazer: (rolagem de dados)"<<endl<<"1 – Desviar "<<endl<<"2 – Contra-atacar "<<endl;
+                cin >> opção;
+
+opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para desviar 2 – Para contra-atacar (rolagem de dados)");    
+                if (opção == 1) {
+                    cout<<endl<<R"(O dragão sopra e todos se espalham, Blanc não perde tempo e dá a ordem para todo
+mundo. “Vert, distraia o dragão, eu e Jaune vamos atingir seus pontos cegos, e Gris...!”
+Ao olhar para o samurai, ela simplesmente desistiu de dar a ordem a ele.
+“Enfrente-me, monstruosidade escamosa! Eu lhe mostrarei o que é dor!” Gris grita, eufórico
+e pula em direção ao inimigo como se não tivesse apreço pela vida, rindo como um idiota.
+“Acho que isso dá pro gasto.” Concluiu Blanc e começou a se mover. “Bora.”)"<<endl<<endl;
+
+num = continuamento(continuar, num, 10);
+                if (num > 10){
+                    cout<<endl<<R"(Por algum motivo, Blanc estava bem confiante naquele momento.
+Vert jogava pedras e criava pilares para atordoar e desestabilizar o dragão, Jaune atirava em
+seus olhos e Blanc causava explosões em seus braços e pernas, tudo que restava era Gris
+arrancar a cabeça do bichão.
+“Ei, Gris, por que está demorando tanto!” Jaune gritou, esperando que a luta acabasse logo.
+“Estou aproveitando o momento, o momento em que decapitarei um dragão com minhas
+próprias lâminas!” Gris falava com orgulho, apontando um das katanas para o dragão.
+“Tudo terminará no meu próximo golpe.”
+Ele fez uma arrancada em uma velocidade incrível, indo diretamente no pescoço do
+monstro, que já estava ferido e cansado.
+SLAAAAAAAAASSSSSHHHHHH!!!!!!
+Com um corte duplo, Gris o atravessou, e a cabeça do lagarto gigante voou junto.
+Parabéns, você concluiu o final “Lagarto gigante arregaçado com sucesso”.)";}
+                else if (num <= 10) {
+                    cout<<endl<<R"(Blanc teve um mal pressentimento para essa luta.
+Vert jogava pedras e criava pilares para atordoar e desestabilizar o dragão, Jaune atirava em
+seus olhos e Blanc causava explosões em seus braços e pernas, tudo que restava era Gris
+arrancar a cabeça do bichão.
+Só que antes de ter a chance, o samurai foi atingido e empurrado para longe, e antes de
+Blanc substitui-lo, o dragão conseguiu alcançar Vert.
+“Irmão!” Jaune gritava, preocupada com ele.
+Ele estava preso entre as garras do monstrengo, que estava prestes a dar mais uma
+baforada, ele deu um sorriso de nervoso, mas falou com confiança. “Tem certeza que sua
+atenção deveria estar em mim?”
+O dragão não entendeu, e iria soprar mesmo assim, então uma flecha atingiu seu pescoço.
+Isso mesmo, a flecha foi poderosa o suficiente para penetrar as escamas do dragão.
+“Não gostou? Que tal mais uma?” Jaune o provocou, desta vez atirando uma flecha ainda
+mais forte.
+O lagarto soltou Vert, que foi resgatado por Blanc, mas a atenção da besta foi para a
+arqueira.
+“Isso vai doer.” Jaune amaldiçoou a si mesma quando viu uma cauda enorme vindo até ela.
+Do outro lado da caverna, Gris recobrou a consciência e voltou rapidamente.
+“Eu não cairei tão facilmente, monstro, estou pronto para a revanche!” Ele correu em
+disparada, virando seus golpes do pescoço do dragão até decapitá-lo.
+Ali perto, Vert pegava Jaune e a colocava nas costas.
+“Ela só está desmaiada, vai ficar tudo bem.” Vert tranquilizava Blanc, que o acompanhava.
+“Que bom, Gris vai matar o dragão daqui a pouco, então já podemos descansar.”
+“É sério?” Ele olhou para a batalha e viu um cadáver de dragão sem cabeça, e um samurai
+caminhando até eles. “Tem razão, vamos descansar.”
+Parabéns, você concluiu o final “Descansar, né? Pois não somos feitos de ferro”.)";}
+}
+
+            else if (opção == 2) { //a
+                
+                num = rolagem(10);
+                
+                if (num > 10){
+                    cout<<endl<<R"(Ao abrir a boca antes de soprar, o dragão deixou a abertura perfeita para Blanc agir, ela
+preparou rapidamente uma de suas magias favoritas, e a lançou na boca do lagarto gigante.
+BOOOOOOOOOOOMMMMMMM!!!!!!
+Uma bomba de fogo explodiu dentro da garganta do monstrengo, desestabilizando-o.
+“Blanc, isso foi incrível!” Jaune a elogiou.
+“Eu sei, eu sei, sinta-se à vontade para alimentar meu mais o meu ego.” Blanc se permitiu
+uma piada antes da ação. “Agora vamos para cima dele!”
+Ela mal terminou a frase quanto um Gris eufórico pulou em cima do dragão como se não
+tivesse medo de ser obliterado, e ainda por cima, estava rindo como um idiota.
+Mas algo aconteceu, algo que ninguém esperava.
+Naquela circunstância, o dragão não tinha mais nada a perder, então ele simplesmente
+devorou o samurai vivo.
+“O que?” Blanc falou.
+“O que?” Jaune disse.
+“O QUEEEEEEEE!!!” Vert gritou.
+“Vamos tirar ele de lá!” A líder voltou a si e mandou os irmãos agirem.
+“Certo!” Eles responderam.
+A quantidade de ataques lançados naquele dragão não foi brincadeira, mas nada além disso
+foi necessário.
+Por quê? Bom...
+“Tem algo acontecendo.” Jaune notou o lagarto se movendo de maneira estranha.
+Então ele caiu, e um buraco apareceu na barriga do monstro, não só sangue e vísceras
+saltaram para fora, mas também um homem vestido armadura japonesa, com suas duas
+espadas e uma pose triunfante.
+“Eu, sozinho, derrotei esta fera monstruosa!” Gris gritou com orgulho, rindo, até ser
+atingido por uma flecha.
+Jaune o encarava. “O que foi?” Ele perguntou, genuinamente confuso.
+Parabéns, você concluiu o final “De dentro para fora, versão Gris o fod*o”.)";}
+                else if (num <= 10){ //b
+                cout<<endl<<R"(Blanc preparou uma magia de fogo imediatamente e a lançou em direção ao dragão,
+atingindo-o no peito.
+Ele rosnou e fez cara feia.
+“Acho que ele ficou irritado.” Vert comentou.
+“Não me diga.” Blanc respondeu, e logo em seguida arregalou os olhos. “O que ele está
+fazendo?”
+Todos olham para o samurai correndo em direção ao perigo, vulgo dragão descontrolado.
+“Gris, seu idiota! Sai de perto dele!” Ela gritou, mas ele não ouviu, estava ocupado demais
+correndo para a morte, e mesmo assim, estava rindo.
+No momento em que deu o salto, o dragão já tinha o sopro pronto, e descarregou tudo na
+cara do samurai, enviando-o para o outro lado da caverna.
+“Será que ele tá bem?” Vert perguntou, não parecia estar preocupado se seu amigo estava
+morto.
+“Eu estaria mais preocupada com a gente.” Jaune apontou para o enorme e imponente
+lagarto, sim, lagarto cuspidor de fogo.
+“Vert, distraia-o, Jaune, mire nos pontos cegos.” A líder ordenou rapidamente.
+“E você, chefe?” O garoto fez mais uma pergunta.
+“Bom, alguém tem que pôr um fim nele, não é?”
+Todos assentiram e começaram a se mover.)"<<endl;
+
+num = continuamento(continuar, num, 10);
+                    
+                if  (num > 10){
+                    cout<<endl<<R"(Por algum motivo, Blanc estava bem confiante naquele momento.
+Gris estava incapacitado? Sim, mas ainda existia esperança, era só... explodir tudo.
+“Jaune, vá atrás do Gris, Vert, imobilize o dragão!” Ela ordenou, Jaune cumpriu
+imediatamente.
+“E como você acha que eu vou fazer isso?” O rapaz protestou.
+“Dá seu jeito, eu acredito em você.” Frase básica do encorajamento, parece que funcionou.
+Blanc corre, esquivando-se de todo e qualquer ataque que o dragão faça, até passar por
+baixo dele.
+“Agora!” Ela gritou.
+Pilares de pedra surgiram por todos os cantos da caverna, atingindo o monstro por todos os
+lados.
+“Eu sou o cara, não sou?” Vert se vangloriava.
+Enquanto isso, Blanc subia pelas costas do dragão até chegar na cabeça. “Ainda não acabou,
+abra a boca dele!”
+“É pra já, chefia.” Ele mandou uma pedra gigante direto na mandíbula do lagarto. “Olha a
+pedra!”
+Blanc aproveitou a oportunidade e saltou na frente do dragão e jogou uma esfera branca na
+boca dele.
+Ao cair, foi recebida pelo grupo inteiro, Gris estava queimado, mas parecia bem.
+“O que você deu pra ele?” Vert perguntou.
+“Um presente especial.” Ela olha para a enorme criatura, ainda presa aos pilares de pedra, e
+estalou os dedos.
+BOOOOOOOOOOOOMMMMMM!!!!!!!
+Uma explosão rolou dentro do dragão, todos os seus órgãos foram destroçados e fumaça
+branca saia da sua boca.
+“Está feito.” O dragão estava morto.
+Parabéns, você concluiu o final “De dentro pra fora, versão Blanc a fod*na”.)";}
+                else if ( num <= 10){
+                    cout<<endl<<R"(Blanc teve um pressentimento ruim para essa luta.
+Já não bastava ter perdido sua linha de frente, ela ainda tinha a sensação de algo iria dar
+errado.
+“Jaune, vá atrás do —!” Blanc estava prestes a dar as ordens quando o dragão deu um grito
+ensurdecedor. “O que essa lagartixa tá fazendo?”
+Aquele lagarto maldito não terminou por aí, ele avançou contra o grupo com ódio no
+coração.
+Todos se espalharam para confundi-lo, mas o monstro já tinha um alvo em mente.
+“Jaune, cuidado!” Vert a avisou, mas não deu tempo, Jaune foi atingida e colidida com uma
+parede.
+“Vert, vá resgatar sua irmã, eu cuido do dragão.” Essas foram as palavras de Blanc.
+“Sozinha? Tem certeza?” Vert estava indeciso.
+“Confie em mim.” Blanc o tranquilizou. “Vai dar tudo certo.”
+O garoto obedeceu, hesitante, mas obedeceu.
+“Agora é só eu e você.” Os dois adversários se encararam por alguns instantes, mas quando
+o dragão se deu conta, Blanc tinha desaparecido do seu campo de visão.
+“Eu tô aqui!” Ela surgiu ao seu lado, mandando explosões brancas direto na cara.
+O dragão rugiu, furioso, mas não conseguia reagir.
+Quando finalmente reuniu gás para o sopro, foi recebido com ainda mais explosões.
+“Vou continuar atacando até sua cabeça virar pó!” Ela criava chamas tão rápido quanto atirava, a cachola do dragão já não estava mais funcionando direito, 
+de tantos impactos que estava recebendo.
+Para o golpe final, Blanc lançou uma rajada de chamas na cabeça do dragão, destruindo o seu crânio e derretendo o seu cérebro.
+Assim que o cadáver caiu no chão, a líder daquele grupo de desajustados, tomada pela exaustão, desmaiou ali mesmo.
+Parabéns, você concluiu o final “É só um dragão, né?”.)";}    
+            }//b  
+        }//a
+    }//c   
+}//d
+                
+            
+        else if (opção == 2){//z
+        cout<<endl<<R"(“É melhor irmos pela esquerda, não quero ver a Jaune virar churrasco.” Disse Blanc, piscando para sua colega.
+“Ei!” A arqueira parecia ofendida.
+“Bom, tanto faz.” Vert opinou.
+“Tudo bem, aguardo inimigos ainda mais poderosos por este caminho.” Declarou Gris a sua
+intenção diante de todos.
+Jaune suspirou. “Você e esse seu fascínio pela quase morte.”
+A caminhada depois disso durou por um bom tempo, o grupo praticamente rushou a masmorra, já que o início estava completamente vazio, até finalmente algo acontecer.
+“Boas notícias.” Blanc se pronunciou. “Encontramos nossa primeira sala do tesouro.”
+Os quatro estavam de frente para a sala, ela não tinha porta, nem guardas, apenas um baú no centro, esperando para ser aberto.
+“Isso aí é armadilha.” Jaune foi a primeira a tirar uma conclusão.
+O samurai deu um passo à frente. “Se for, eu me ofereço para encará-la.”
+Blanc olhou para o seu grupo, no final, a decisão era dela.)"<<endl;
+        cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Entrar na sala com Gris"<<endl<<"2 – Mandar Vert entrar primeiro"<<endl<<"3 – Desistir da sala e seguir em frente"<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 3, 
+"Opção inválida, escolha novamente: 1 – Para entrar na sala com Gris 2 – Para mandar Vert entrar primeiro 3 – Para desistir da sala e seguir em frente");
+                if (opção == 1) {//f
+                    cout<<endl<<R"(Ela suspirou. “Eu vou entrar.”
+“Eu irei com você.” O samurai avisou.
+“Fica à vontade.”
+Os dois dão alguns passos até estarem no centro daquela sala quase vazia, esperando algo
+acontecer.
+“Parece que não tem nada.” Vert comentou.
+“Espera.” Blanc ainda estava alerta.
+Um alçapão abriu debaixo de seus pés, ela e Gris caíram nas profundezas da masmorra.
+A queda não foi nada confortável.
+“Onde estamos?” O samurai pergunta ao se levantar.
+“Em um lugar que não deveríamos estar.” Blanc responde. “Os outros devem chegar em 3...
+2... 1...” Ao terminar a contagem, duas pessoas caem ali perto.
+Eram os irmãos Jaune e Vert.
+“Esse lugar me dá arrepios.” Jaune comenta olhando para todos os lados.
+Teias de aranha inundavam a caverno onde estavam.
+“Vamos procurar por uma saída.” Sugeriu a líder. “Ou algo mais interessante.”
+“Sim, chefe!” Todos disseram, fazendo saudação militar.
+Caminhando pela escuridão, o grupo ouviu um barulho repugnante.
+“Ah, não.” Jaune falava com nojo. “Aranhas.”
+Dúzias delas apareceram ao redor deles, eram tão grandes quanto eles.
+“Pessoal, já sabem o que fazer.” Blanc dizia, empunhando sua adaga.)"<<endl;
+        cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Espancar as aranhas "<<endl<<"2 – Fatiar as aranhas "<<endl<<"3 – Explodir as aranhas"<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 3, 
+"Opção inválida, escolha novamente: 1 – Para espancar as aranhas 2 – Para fatiar as aranhas 3 – Para explodir as aranhas");
+        cout<<endl<<R"(De qualquer forma, as aranhas morrem no final.
+O grupo continuou até chegar em um lugar amplo, típica sala de chefão, então uma aranha
+gigante apareceu do teto, que surpresa...
+“Encontramos a mãe...” Vert não parecia muito animado. “Matar ela vai dar uma boa
+grana?”
+“Hmm... acho que teremos 3 meses de estalagem de luxo e picanha pra todo mundo.” Blanc
+respondeu.
+Os olhos do garoto brilharam como nunca. “Vamos fazer purê dessa carcaça cheia de
+pernas.”
+“Eu concordo com o garoto. Vamos pôr um fim nesta criatura aracnídea.” Se o Gris disse, tá
+dizido.
+Já que todos estavam de acordo, ninguém perdeu tempo para eliminar a aranha de 20
+metros de largura.
+Jaune e Vert lançavam seus ataques nos olhos da aranha, enquanto Gris e Blanc miravam
+nas pernas.
+A estratégia estava dando certo, certo até demais...
+É zoeira, vencer a aranha não foi difícil, agora só falta finalizá-la.)"<<endl;
+                cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Incinera-la "<<endl<<"2 – Desmembra-la "<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para incinera-la 2 – Para desmembra-la");
+                if (opção == 1){//g
+            cout<<endl<<R"(“Vert, prenda-a no teto!” Blanc gritou a ordem, Vert obedeceu.
+Onde quer que a aranha pisava era uma armadilha criada pelo garoto, impossibilitando a
+movimentação do monstro de oito pernas.
+A quantidade de flechas que o monstro recebeu não é brincadeira, a única coisa que a
+aranha era capaz de fazer era aguardar a morte.
+“Bom, acho que o golpe final é meu.” Disse Blanc, criando uma pequena chama branca em
+sua mão.
+Ela lança essa chama na aranha ferida, e então explode, queimando o monstro por
+completo.
+Parabéns, você concluiu o final “A dona aranha subiu pela parede, veio a chama do inferno e
+a incinerou”.)";
+}//g
+                else if (opção == 2){//l
+            cout<<endl<<R"(“Vert, mande-a pro chão!” Blanc gritou a ordem, Vert obedeceu.
+Pilares de terra surgiram de cima para baixa, emburrando a aranha para onde Blanc queria.
+“Gris, vamos acabar com ela!”
+“Não precisa dizer duas vezes.”
+Os dois correm pelo campo, driblando o campo de visão do monstro, a cada oportunidade,
+uma perna era cortada a fora, e quando terminou todas, ela já estava morta.
+Parabéns, você concluiu o título “Brutal, não sobrou nada para a aranha”.)";
+}//l
+    }//f
+                else if (opção == 2) {//h
+                    cout<<endl<<R"(“Vert, é contigo.”
+“Oi?” Ele piscou, e logo levou um tapa da irmã.
+“Vai logo, a chefinha mandou.” Jaune disse com ar de divertimento.
+“Por que sobrou pra mim?” Ele se questionou.
+“Não se preocupe, eu o acompanharei.” O samurai o tranquilizou.
+Os dois entraram na sala e aguardaram algo acontecer.
+“Olha só, parece que não tem —!” Vert caiu em um alçapão antes de terminar a frase, Gris
+foi junto.
+As duas apenas observavam o buraco que apareceu e ouviam os gritos diminuindo.
+“Vamos atrás deles?” Jaune perguntou.)"<<endl;
+                cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Sim "<<endl<<"2 – Não, eles se viram "<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para dizer “sim” 2 – Para dizer “não, eles se viram”");
+                if (opção == 1){//k
+                    cout<<endl<<R"(Blanc se afasta do buraco e se prepara.
+“O que você tá fazendo?” Jaune pergunta mais uma vez.
+A líder não responde, ela simplesmente corre e pula no alçapão.
+“Eu mereço.” A arqueira fala como se estivesse exausta e pula também.
+As duas caem nas profundezas da masmorra e se encontram com os homens do grupo.
+“Pensei que vocês abandonariam a gente.” Vert e sua honestidade.
+“Eu poderia, mas não sou tão má assim.” Blanc responde.
+“Esse lugar me dá arrepios.” Jaune comenta olhando para todos os lados.
+Teias de aranha inundavam a caverno onde estavam.
+“Vamos procurar por uma saída.” Sugeriu a líder. “Ou algo mais interessante.”
+“Sim, chefe!” Todos disseram, fazendo saudação militar.
+Caminhando pela escuridão, o grupo ouviu um barulho repugnante.
+“Ah, não.” Jaune falava com nojo. “Aranhas.”
+Dúzias delas apareceram ao redor deles, eram tão grandes quanto eles.
+“Pessoal, já sabem o que fazer.” Blanc dizia, empunhando sua adaga.)"<<endl;
+                cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Espancar as aranhas "<<endl<<"2 – Fatiar as aranhas "<<endl<<"3 – Explodir as aranhas"<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 3, 
+"Opção inválida, escolha novamente: 1 – Para espancar as aranhas 2 – Para fatiar as aranhas 3 – Para explodir as aranhas");
+        cout<<endl<<R"(De qualquer forma, as aranhas morrem no final.
+O grupo continuou até chegar em um lugar amplo, típica sala de chefão, então uma aranha
+gigante apareceu do teto, que surpresa...
+“Encontramos a mãe...” Vert não parecia muito animado. “Matar ela vai dar uma boa
+grana?”
+“Hmm... acho que teremos 3 meses de estalagem de luxo e picanha pra todo mundo.” Blanc
+respondeu.
+Os olhos do garoto brilharam como nunca. “Vamos fazer purê dessa carcaça cheia de
+pernas.”
+“Eu concordo com o garoto. Vamos pôr um fim nesta criatura aracnídea.” Se o Gris disse, tá
+dizido.
+Já que todos estavam de acordo, ninguém perdeu tempo para eliminar a aranha de 20
+metros de largura.
+Jaune e Vert lançavam seus ataques nos olhos da aranha, enquanto Gris e Blanc miravam
+nas pernas.
+A estratégia estava dando certo, certo até demais...
+É zoeira, vencer a aranha não foi difícil, agora só falta finalizá-la.)"<<endl;
+                cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Incinera-la "<<endl<<"2 – Desmembra-la "<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para incinera-la 2 – Para desmembra-la");
+                if (opção == 1){//g.1
+            cout<<endl<<R"(“Vert, prenda-a no teto!” Blanc gritou a ordem, Vert obedeceu.
+Onde quer que a aranha pisava era uma armadilha criada pelo garoto, impossibilitando a
+movimentação do monstro de oito pernas.
+A quantidade de flechas que o monstro recebeu não é brincadeira, a única coisa que a
+aranha era capaz de fazer era aguardar a morte.
+“Bom, acho que o golpe final é meu.” Disse Blanc, criando uma pequena chama branca em
+sua mão.
+Ela lança essa chama na aranha ferida, e então explode, queimando o monstro por
+completo.
+Parabéns, você concluiu o final “A dona aranha subiu pela parede, veio a chama do inferno e
+a incinerou”.)";
+}//g.1
+                else if (opção == 2){//l.1
+            cout<<endl<<R"(“Vert, mande-a pro chão!” Blanc gritou a ordem, Vert obedeceu.
+Pilares de terra surgiram de cima para baixa, emburrando a aranha para onde Blanc queria.
+“Gris, vamos acabar com ela!”
+“Não precisa dizer duas vezes.”
+Os dois correm pelo campo, driblando o campo de visão do monstro, a cada oportunidade,
+uma perna era cortada a fora, e quando terminou todas, ela já estava morta.
+Parabéns, você concluiu o título “Brutal, não sobrou nada para a aranha”.)";
+}//l.1
+}//k
+            else if (opção == 2){//ç
+                cout<<endl<<R"(“Não, eles vão dar um jeito de saírem vivos, confio neles.” Blanc respondeu. “Vamos ver se
+achamos algum tesouro adiante.
+Jaune não respondeu, mas seguiu as ordens da líder.
+Mais alguns minutos de caminhada e algo estranho estava acontecendo.
+“Nossa... alguém morreu aqui perto, só pode.” Jaune tampava o nariz.
+Não só o cheiro de lixo podre, mas também um cheiro metálico.
+“Esse cheiro de sangue, é anormal.” Blanc continuou andando até entrar em um corredor.
+Havia um homem pálido no final dele, estava segurando um cadáver.
+As duas garotas o encararam por um instante, e foi suficiente para ele perceber.
+“Jaune...” Blanc a chamou.)"<<endl;
+            cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Fugir "<<endl<<"2 – Lutar (Rolagem de dados)"<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para fugir 2 – Para lutar (Rolagem de dados)");
+            if (opção == 1){//r
+                cout<<endl<<R"(“...vamos meter o pé.”
+A arqueira assentiu e as duas voltaram pelo mesmo caminho que vieram.
+“Estão fugindo? Que escolha inteligente.” Disse o vampiro, se preparando para a caçada.
+Quando chegaram na sala do tesouro de antes, já estavam um pouco ofegantes.
+“Despistamos ele?” Jaune perguntou.
+“Acho que sim, mas é melhor procurarmos por Gris e Vert —!” Blanc arregalou os olhos
+diante do que acabou de acontecer.
+“Pensaram que podiam fugir de mim?” Dizia o vampiro, perfurando uma lâmina de sangue
+no estômago de Jaune.
+Parabéns, você concluiu o final “Não me viu chegando?”)";
+}//r
+            else if (opção == 2){//n
+            num = rolagem(15);
+                if (num > 15){//b
+                cout<<endl<<R"(“... pegue sua arma.”
+“Oh, vocês irão lutar? Eu não recomendaria isso.” O vampiro dizia arrogantemente,
+“Bom, fazer o que, a gente é tapado assim mesmo.” Blanc respondeu.
+Jaune atirou uma flecha, e o homem apenas rebateu com suas unhas anormalmente longas.
+“É só isso que você tem?”
+Mas enquanto falava, ele não percebeu as dezenas de flechas sendo lançadas nele ao
+mesmo tempo.
+Todas foram defendidas.
+“Tudo bem, eu não esperava por isso.” Ele invocou uma adaga de sangue e bloqueou o
+golpe de Blanc, que vinha por trás.
+“Você parece bem calmo para alguém que está cercado.” Era como se Blanc estivesse
+conversando, mesmo durante a luta.
+Várias flechas vieram mais uma vez, ainda mais potentes.
+O vampiro começou a ter dificuldades.
+“Vocês são mais fortes do que eu esperava.” Ele falava no meio da trocação.
+“Estava nos subestimando? Típico.” Sim, os dois estavam conversando enquanto atacavam
+10 vezes por segundo.
+No final, o vampiro não esperava levar um soco na cara, ao invés de um corte com a adaga
+ou uma flecha.
+O soco de Blanc o atordoou, tempo o bastante para preparar um feitiço de desintegração
+baseado em chamas da cor branca.
+No final, o vampiro virou cinzas.
+Parabéns, você concluiu o final “A sorte chega para todos”.)";}//b
+                else if (num <= 15){//g
+                    cout<<endl<<R"(“... pegue sua arma.”
+“Oh, vocês irão lutar? Eu não recomendaria isso.” O vampiro dizia arrogantemente,
+“Bom, fazer o que, a gente é tapado assim mesmo.” Blanc respondeu.
+O inimigo se moveu rápido, quase acertou Jaune, mas foi bloqueado por Blanc.
+“Sinto que vou me divertir muito.” O vampiro parecia eufórico.
+Ele continuou avançando na arqueira, bloqueando os ataques das duas ao mesmo tempo.
+“Ficou apaixonado por mim, por acaso?” Jaune atirava cada vez mais flechas.
+“Apenas escolhi o alvo mais pertinente.” Ele respondeu com calma até demais.
+Ele criou várias adagas de sangue e lançou por todos os lados.
+Uma delas atingiu o peito de Jaune, por pouco não atingiu o coração.
+Antes que o vampiro a alcançasse, uma parede de fogo separou os dois.
+“Essas chamas... são perigosas, estava guardando para me matar?” Ele perguntou.
+“Essa era a ideia, mas agora que mostrei meu trunfo, não vou conseguir.” Ela verificou
+Jaune, retirou a adaga e jogou uma poção de cura na ferida.
+“Você não vai cessar essa parede para continuarmos, certo?” Blanc não respondeu. “Então
+irei me retirar, espero nos encontrarmos novamente.” Ele se despediu e saiu do lugar,
+deixando as duas sozinhas.
+Parabéns, você concluiu o final “Escolhas e consequências”.)";}//g
+            }//n
+        }//ç
+}//h
+                else if (opção == 3) {//y
+                    cout<<endl<<R"(“Não vale o risco, e aquele baú nem parece ter algo interessante.” Ela decidiu.
+Ninguém comentou, e o grupo continuou andando.
+Levou mais alguns minutos de caminhada até perceberem algo.
+“O cheiro de sangue... está mais forte.” Blanc avisou o grupo.
+“Nossa, algum aventureiro deve ter morrido aqui perto.” Vert comentou, tampando o nariz.
+“Como alguém morre num lugar desses?” Jaune fala com razão, aquela parte da masmorra
+não era perigosa.
+A líder pensou por um momento, será que...
+“Não importa, vamos continuar.”
+Eles seguiram mais um pouco sem se preocupar com o cheiro, até chegarem em um
+corredor em específico.
+Esse corredor, na qual o grupo entrou sem perceber, estava até que normal, se não fosse
+pelo homem pálido segurando um cadáver pelo pescoço bem ali.
+“Mais visitantes? Que sorte a minha.” Ele largou o corpo e encarou os quatro a sua frente.
+Seria mentira dizer que isso não assustou eles, mas medo não era algo visto em seus rostos.
+“Um vampiro, e é certamente um poderoso.” Gris alertou, não para fugirem, mas para
+tomarem cuidado na hora de lutar.
+“Aí, chefe, acho que ele não vai nos deixar passar, não é?” Vert fez uma pergunta retórica,
+na verdade.)"<<endl;
+    cout<<endl<<"O que você quer fazer?"<<endl<<"1 – Fugir "<<endl<<"2 – Lutar (Rolagem de dados)"<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para fugir 2 – Para lutar (Rolagem de dados)");
+        if (opção == 1){//x
+        desistir:
+            cout<<endl<<"Você não está desistindo demais não? Vamos, escolha de novo:";
+        cout<<endl<<"1 – Fugir "<<endl<<"2 – Lutar (Rolagem de dados)"<<endl;
+        cin>>opção;
+        opção = validaropção(opção, 1, 2, 
+"Opção inválida, escolha novamente: 1 – Para fugir 2 – Para lutar (Rolagem de dados)");
+            if (opção == 1){//l
+                goto desistir;
+            }//l
+            else{//h
+                goto lutar;
+            }//h
+}//x
+        else if (opção == 2){//j
+        lutar:
+        cout<<endl<<R"(Bom, acho que não temos escolha.” Blanc disse sem qualquer emoção em sua voz. “Hora
+de caçar vampiros.” Ela desembainha sua lâmina.)"<<endl;
+num = continuamento(continuar, num, 3);
+
+    if (num > 3){//p
+        cout<<endl<<R"(O primeiro a se mover foi Gris, avançando impavidamente em direção, ele empunhou sua
+katana e fez um corte vertical no vampiro.
+“Vocês não perdem tempo, que gracinha.” Disse o vilão, segurando a lâmina com dois
+dedos.
+“Sua atitude arrogante não durará, vampiro.” O samurai mudou a postura e desferiu vários
+golpes no inimigo.
+“É só isso que você tem?” Ele provocou.
+“Não, mas é só isso que você receberá.” Gris respondeu, seu tom de voz era confiante.
+O chão abaixo do vampiro se abriu, engolindo-o e prendendo-o.
+“Parece que vocês me pegaram.” O homem disse, ainda sorrindo. “Mas não se preocupem,
+quando me libertar daqui, matarei todos vocês.
+“Se libertar? E quem disse que você vai estar vivo para se libertar?” Blanc apareceu ao lado
+de Gris.
+“Não seja ridícula, eu sou imortal, não podem me matar.” Ele parecia zombar da cara da
+líder, o grupo não gostou.
+“Tem razão, a gente não pode.” Jaune comentou, se apoiando no ombro do irmão.
+“Tirando a nossa líder, ou seja, cara, você tá ferrado.” Vert continuou, sem notar a mudança
+na expressão do vampiro.
+Ele olhou para Blanc novamente, e viu seu olhar branco, encarando-o até a alma.
+“Não pode ser.” Ele diz, e em um estalar de dedos, uma chama branca apareceu na mão de
+Blanc.
+Naquele momento, o perigoso vampiro virou cinzas, completamente humilhado.
+Parabéns, você concluiu o final “Vampiro bom é vampiro morto”.)";
+    }//p
+    else if (num <= 3){//c
+        cout<<endl<<R"(Mas que azar, hein?
+        
+Por um momento, parecia que nada podia dar certo.
+A situação não estava a favor do grupo, e qualquer um diria que o desfecho já estava praticamente decidido.
+Mas nem sempre as coisas seguem a lógica.
+Independentemente do número horrível que você tirou, o vampiro foi arregaçado. 
+Simples assim. Sem explicação convincente, sem grandes cerimônias — só deu certo.
+Parabéns, você concluiu o final “O que importa é que tudo deu certo”.)";
+            }//c
+        }//j
+    }//y
+}//z
+    return 0;
+  }
+void processamento(){
+    cout<<endl<<"== EXECUTANDO AÇÃO =="<<endl<<endl<<"1... "<<flush;
+    this_thread::sleep_for(chrono::seconds(1));
+    cout<<"2... "<<flush;
+    this_thread::sleep_for(chrono::seconds(1));
+    cout<<"3..."<<flush;
+    this_thread::sleep_for(chrono::seconds(1));
+    cout<<endl;
+} 
+  
+  
+int validaropção(int opção, int min, int max, string mensagemErro) {
+    while (true) {
+        if (cin.fail()) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout<<endl<<mensagemErro<<endl;
+            cin>>opção;
+        }
+        else if (opção < min || opção > max) {
+            
+            cout<<mensagemErro<<endl;
+            cin>>opção;
+        } 
+        else {
+            processamento();
+            return opção;
+        }
+    }
+}
+
+int rolagem(int comp) {
+    int num = 1+(rand()%20);
+    cout<<endl<<" == TESTANDO SUA SORTE =="<<endl;
+    this_thread::sleep_for(chrono::seconds(2));
+        if (num > comp){
+            cout<<endl<<"QUE SORTE!"<<endl;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<"Você tirou "<<num<<endl<<endl;
+            this_thread::sleep_for(chrono::milliseconds(1500));
+            
+        }
+        else {
+            cout<<endl<<"QUE AZAR!"<<endl;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<"Você tirou "<<num<<endl;
+            this_thread::sleep_for(chrono::milliseconds(1500));
+            
+        }
+        return num;
+}
+
+int continuamento(int continuar, int num, int comp){
+    cout<<endl<<"Digite 1 quando estiver pronto para continuar"<<endl;
+        continuação:
+cin>>continuar;
+    if (continuar == 1){ 
+    num = rolagem(comp);
+    processamento();
+    return num;
+    return comp;
+}
+    else if(cin.fail()){
+    cin.clear(); 
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout<<endl<<"Não entendi, quando terminar de ler digite 1"<<endl;
+    goto continuação;}
+    
+    else {
+    cout<<"Pode terminar de ler, quando terminar digite 1"<<endl;
+    goto continuação;}
+}
